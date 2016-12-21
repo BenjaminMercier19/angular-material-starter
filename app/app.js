@@ -6,9 +6,8 @@ angular
       $mdIconProvider.fontSet('md', 'material-icons');
 
       $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
-        .accentPalette('orange');
-
+        .primaryPalette('indigo')
+        .accentPalette('green');
       //SET ROUTING
       $routeProvider
       	.when('/menu1', {
@@ -20,7 +19,6 @@ angular
         .otherwise({
           redirectTo: '/menu1',
         });
-
         //$locationProvider.html5Mode(true);
 
 });

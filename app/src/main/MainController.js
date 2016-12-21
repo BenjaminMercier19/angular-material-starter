@@ -15,7 +15,6 @@
    */
   function MainController( $mdSidenav, $location ) {
     var self = this;
-
     self.selected     = null;
     self.menus        = [
     {
@@ -26,6 +25,8 @@
       name: "Menu 2",
       route: "/menu2"
     }];
+
+    
     self.selectMenu   = selectMenu;
     self.toggleList   = toggleMenuList;
     self.isViewLoading = true;
