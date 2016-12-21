@@ -22,7 +22,7 @@ You should find that you have one new folder in your project:
 app/                    --> all of the source files for the application
   assets/app.css        --> default stylesheet
   src/                  --> all app specific modules
-     users/             --> package for user features
+     main/              --> package for main features as menu
   index.html            --> app layout file (the main html template file of the app)
 ```
 
@@ -35,41 +35,8 @@ server during development to avoid issues with security restrictions (sandbox) i
 sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
 etc to function properly when an html page is opened via the `file://` scheme instead of `http://`.
 
-### Running the App during Development
-
-The angular-material project comes pre-configured with a local development web server. It is a
-node.js tool called [live-server][live-server].
-
-You can run the following command to start the server:
-
-```
- node ./node_modules/live-server/live-server.js . --open=app
-```
-
-This should open your browser to [http://localhost:8080/app/](http://localhost:8080/app/) so you
-can view the Material-Start app.
-
-You can install also live-server globally to make life easier and for use with other applications:
-
-```
-npm install -g live-server
-```
-
-Then you can start your own development web server to serve static files from a folder by running:
-
-```
-cd my-project
-live-server .
-```
-
-Finally, you can choose to configure your a different webserver, such as apache or nginx. Just
-configure your server to serve the files under the `app/` directory.
 
 ## Updating Angular
-
-Previously we recommended that you merge in changes to angular-seed into your own fork of the
-project. Now that the AngularJS framework library code and tools are acquired through package managers
-(npm) you can use these tools instead to update the dependencies.
 
 You can update the tool dependencies by running:
 
@@ -79,16 +46,36 @@ npm update
 
 This will find the latest versions that match the version ranges specified in the `package.json` file.
 
+## Development phase
 
-## Contact
+Grunt, the Javascript task runner, has been installed in `package.json` to make your life easier.
+A livereload on watch is set up in `Gruntfile.js`, don't forget to add the Chrome plugin of livereload.
+To launch the code watcher enter this command line:
 
-For more information on AngularJS please check out http://angularjs.org/
+```
+grunt watch
+```
+
+The default task is currently here to check your code syntax with jshint, concatenate it and even minify it in a build folder.
+To launch this task run:
+```
+grunt
+```
+
+To find more information about Grunt please check out https://gruntjs.com
+
+## Angular Material
+
+This project's design is based on Angular Material framework. Angular Material works with Angular, it'll make your life easier while creating frontend components
 
 For more information on Angular Material, check out https://material.angularjs.org/
 
-[git]: http://git-scm.com/
-[bower]: http://bower.io
+## Contact
+
+For more information on the project please contact [Benjamin Mercier][contact].
+
+
 [npm]: https://www.npmjs.org/
 [node]: http://nodejs.org
-[travis]: https://travis-ci.org/
 [live-server]: https://www.npmjs.com/package/live-server
+[contact]: benjamin.mercier@progis.fr

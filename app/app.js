@@ -7,7 +7,7 @@ angular
 
       $mdThemingProvider.theme('default')
         .primaryPalette('indigo')
-        .accentPalette('green');
+        .accentPalette('pink');
       //SET ROUTING
       $routeProvider
       	.when('/menu1', {
