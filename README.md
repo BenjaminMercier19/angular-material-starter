@@ -1,5 +1,17 @@
+# Application StarterApp
 
-#### Install Dependencies
+This application is design to be a good and easy-to-use starter for your future apps. Based on Angular, Angular-Material framework, embedding dependencies with npm in `package.json` and automating your development phase with Grunt in `Gruntfile.js`.
+
+To clone the code in your repo run:
+```
+git clone https://github.com/BenjaminMercier19/angular-material-starter.git
+```
+then
+```
+cd material-start-es5/
+```
+
+## Install Dependencies
 
 We have two kinds of dependencies in this project: tools and AngularJS framework code.  The tools
 help us manage and test the application.
@@ -46,7 +58,7 @@ npm update
 
 This will find the latest versions that match the version ranges specified in the `package.json` file.
 
-## Development phase
+## Grunt
 
 Grunt, the Javascript task runner, has been installed in `package.json` to make your life easier.
 A livereload on watch is set up in `Gruntfile.js`, don't forget to add the Chrome plugin of livereload.
@@ -61,6 +73,7 @@ To launch this task run:
 ```
 grunt
 ```
+You can add some tasks as compiling CSS with `grunt-contrib-sass` for instance. Feel free to add your own tasks.
 
 To find more information about Grunt please check out https://gruntjs.com
 
