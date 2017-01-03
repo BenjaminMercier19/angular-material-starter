@@ -2,7 +2,7 @@
 
   angular
        .module('menu2')
-       .controller('Menu2Controller', [
+       .controller('Menu2Controller', ['$scope',
           Menu2Controller
        ]);
 
@@ -12,10 +12,12 @@
    * @param avatarsService
    * @constructor
    */
-  function Menu2Controller( ) {
+  function Menu2Controller($scope) {
     var self = this;
 
-    self.displayName     = "Menu2";
+    self.displayName     = "Testing menu display";
+    $scope.main.isViewLoading = true;
+
   }
 
 })();

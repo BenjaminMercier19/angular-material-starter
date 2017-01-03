@@ -18,15 +18,15 @@
     self.selected     = null;
     self.menus        = [
     {
-      name: "Menu 1",
-      route: "/menu1"
+      name: "Contrats",
+      route: "/contracts"
     },
     {
       name: "Menu 2",
       route: "/menu2"
     }];
 
-    
+
     self.selectMenu   = selectMenu;
     self.toggleList   = toggleMenuList;
     self.isViewLoading = true;

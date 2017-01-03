@@ -2,6 +2,34 @@
   'use strict';
 
   // Prepare the 'users' module for subsequent registration of controllers and delegates
+  angular.module('contracts', [ 'ngMaterial' ]);
+
+
+})();
+
+(function(){
+
+  angular
+       .module('contracts')
+       .controller('ContractsController', ['$scope',
+          ContractsController
+       ]);
+
+
+  function ContractsController( $scope) {
+    var self = this;
+
+    $scope.main.isViewLoading = false;
+    self.displayName     = "Contracting view";
+    self.contractNumber = "00934756245";
+  }
+
+})();
+
+(function(){
+  'use strict';
+
+  // Prepare the 'users' module for subsequent registration of controllers and delegates
   angular.module('main', [ 'ngMaterial' ]);
 
 
@@ -27,15 +55,15 @@
     self.selected     = null;
     self.menus        = [
     {
-      name: "Menu 1",
-      route: "/menu1"
+      name: "Contrats",
+      route: "/contracts"
     },
     {
       name: "Menu 2",
       route: "/menu2"
     }];
 
-    
+
     self.selectMenu   = selectMenu;
     self.toggleList   = toggleMenuList;
     self.isViewLoading = true;
@@ -109,7 +137,7 @@
 
   angular
        .module('menu2')
-       .controller('Menu2Controller', [
+       .controller('Menu2Controller', ['$scope',
           Menu2Controller
        ]);
 
@@ -119,10 +147,12 @@
    * @param avatarsService
    * @constructor
    */
-  function Menu2Controller( ) {
+  function Menu2Controller($scope) {
     var self = this;
 
-    self.displayName     = "Menu2";
+    self.displayName     = "Testing menu display";
+    $scope.main.isViewLoading = true;
+
   }
 
 })();
@@ -187,7 +217,7 @@
 })();
 
 angular
-    .module('starterApp', ['ngMaterial', 'ngRoute', 'main', 'menu1', 'menu2'])
+    .module('starterApp', ['ngMaterial', 'ngRoute', 'main', 'menu1', 'menu2', 'contracts'])
     .config(function($mdThemingProvider, $mdIconProvider, $routeProvider){
 
       $mdIconProvider.icon("menu", "./assets/svg/menu.svg", 24);
@@ -195,19 +225,18 @@ angular
 
       $mdThemingProvider.theme('default')
         .primaryPalette('indigo')
-        .accentPalette('green');
+        .accentPalette('pink');
       //SET ROUTING
       $routeProvider
-      	.when('/menu1', {
-          templateUrl: '/app/src/menu1/menu1.html'
+      	.when('/contracts', {
+          templateUrl: '/app/src/contracts/contracts.html'
         })
         .when('/menu2', {
           templateUrl: '/app/src/menu2/menu2.html'
         })
         .otherwise({
-          redirectTo: '/menu1',
+          redirectTo: '/menu2',
         });
         //$locationProvider.html5Mode(true);
-        if
 
 });

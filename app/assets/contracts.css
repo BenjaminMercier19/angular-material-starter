@@ -1,0 +1,22 @@
+.contracts-meta
+{
+  background-color: grey;
+}
+
+.contracts-content {
+  background-color: #e0e0e0;
+}
+
+.header {
+  height: 20px;
+}
+
+.contracts-meta .header
+{
+  background-color: orange;
+}
+
+.contracts-content .header
+{
+  background-color: #ffffff;
+}

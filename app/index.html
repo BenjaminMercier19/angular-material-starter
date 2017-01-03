@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
+    <link rel="stylesheet" href="assets/contracts.css"/>
 
     <style type="text/css">
         /**
@@ -25,6 +26,7 @@
 
   <body ng-app="starterApp" layout="column" ng-controller="MainController as main" ng-cloak>
 
+    <md-progress-linear md-mode="indeterminate" class="md-accent" ng-show="main.isViewLoading"></md-progress-linear>
     <md-toolbar layout="row">
       <md-button class="menu" ng-click="main.toggleList()" aria-label="Show User List">
         <md-icon md-svg-icon="menu" ></md-icon>
@@ -32,7 +34,6 @@
       <h1>Angular Material - Starter App</h1>
     </md-toolbar>
 
-    <md-progress-linear md-mode="indeterminate" class="md-accent" ng-show="main.isViewLoading"></md-progress-linear>
 
     <div flex layout="row">
 
@@ -47,7 +48,7 @@
             </md-list>
           </md-sidenav>
 
-          <section flex layout-padding ng-view>
+          <section flex layout-fill ng-view>
           </section>
 
 
@@ -69,6 +70,10 @@
     <!-- Menu2 -->
     <script src="./src/menu2/Menu2.js"></script>
     <script src="./src/menu2/Menu2Controller.js"></script>
+    <!-- contracts -->
+    <script src="./src/contracts/Contracts.js"></script>
+    <script src="./src/contracts/ContractsController.js"></script>
+
 
     <script src="./app.js"></script>
 

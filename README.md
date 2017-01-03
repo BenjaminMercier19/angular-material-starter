@@ -47,6 +47,10 @@ server during development to avoid issues with security restrictions (sandbox) i
 sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
 etc to function properly when an html page is opened via the `file://` scheme instead of `http://`.
 
+You also can use the live webserver installed in the node modules running:
+```
+node ./node_modules/live-server/live-server.js . --open=app
+```
 
 ## Updating Angular
 
