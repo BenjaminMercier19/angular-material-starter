@@ -1,4 +1,5 @@
 (function(){
+  'use strict';
 
   angular
        .module('main')
@@ -15,6 +16,7 @@
    */
   function MainController( $mdSidenav, $location ) {
     var self = this;
+
     self.selected     = null;
     self.menus        = [
     {
@@ -49,7 +51,6 @@
     function selectMenu ( menu ) {
       self.selected = angular.isNumber(menu) ? self.menus[menu] : menu;
       $location.path(menu.route);
-
     }
 
   }

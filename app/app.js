@@ -1,5 +1,7 @@
+"use strict";
+
 angular
-    .module('starterApp', ['ngMaterial', 'ngRoute', 'main', 'menu1', 'menu2', 'contracts'])
+    .module('starterApp', ['ngMaterial', 'ngRoute', 'main', 'menu2', 'contracts'])
     .config(function($mdThemingProvider, $mdIconProvider, $routeProvider){
 
       $mdIconProvider.icon("menu", "./assets/svg/menu.svg", 24);
@@ -8,6 +10,7 @@ angular
       $mdThemingProvider.theme('default')
         .primaryPalette('indigo')
         .accentPalette('pink');
+
       //SET ROUTING
       $routeProvider
       	.when('/contracts', {
@@ -19,6 +22,4 @@ angular
         .otherwise({
           redirectTo: '/menu2',
         });
-        //$locationProvider.html5Mode(true);
-
 });
