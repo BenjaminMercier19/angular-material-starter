@@ -8,10 +8,13 @@
   </div>
 
   <div layout="column" flex class="contracts-content">
-    <div class="header" layout="row" layout-padding>
-      <span>{{contractant-name}}</span>
+    <div  layout="row" layout-padding>
+      <span>Voici le contrat n° {{c.contractNumber}}</span>
       <span flex></span>
-      <a> Link to others </a>
+      <md-button ng-click="c.getContractInfo()">Récupérer les infos du contrat</md-button>
+    </div>
+    <div ng-if="c.contractInfo">
+      {{c.contractInfo}}
     </div>
   </div>
 </div>
